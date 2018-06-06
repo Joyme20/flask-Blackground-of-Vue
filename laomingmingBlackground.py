@@ -70,8 +70,8 @@ def markdownToHtml(name):
     #把从数据库获取的list格式的文章连接成字符串格式
     text = "".join(text)
 
-    html = markdown(text)
-    print(html)
+    # html = markdown(text)
+    print(text)
 
     # 关闭Cursor:
     cursor.close()
@@ -84,9 +84,10 @@ def markdownToHtml(name):
 
 
 
-    return html
+    return text
 
 if __name__ == '__main__':
     CORS(app, supports_credentials=True) #解决跨域请求
     # app.debug = True
+    # app.run(host='0.0.0.0', port=5001)
     app.run()
