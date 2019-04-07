@@ -85,6 +85,7 @@ def get_user():
     return data
 
 
+# 更新用户账户信息
 @app.route('/update_user', methods=['POST', ])
 def update_user():
     data = request.data
@@ -106,6 +107,7 @@ def update_user():
     return data
 
 
+# 注册功能
 @app.route("/register", methods=['POST', ])
 def register():
     data = request.data
@@ -131,6 +133,7 @@ def register():
         return ""
 
 
+# 检查账户名称是否已存在
 @app.route("/check_username", methods=['POST', ])
 def check_username():
     data = request.get_json()
@@ -139,6 +142,7 @@ def check_username():
     return sql_function(sql, val)
 
 
+# 获取文章标题
 @app.route("/title", methods=['GET', ])
 def get_title():
     # 连接到SQLite数据库
@@ -176,6 +180,7 @@ def get_title():
     return data
 
 
+# 获取编程类型文章的标题
 @app.route("/code_title", methods=['GET', ])
 def get_code_title():
     # 连接到SQLite数据库
@@ -205,6 +210,7 @@ def get_code_title():
     return data
 
 
+# 获取文学类型文章的标题
 @app.route("/lite_title", methods=['GET', ])
 def get_lite_title():
     # 连接到SQLite数据库
@@ -261,39 +267,20 @@ def get_user_title():
     return data
 
 
-@app.route("/articles/<article_id>", methods=['GET', ])
-def get_markdown(article_id):
-    print(type(id))
+# 获取文章功能
+@app.route("/get_article", methods=['POST', ])
+def get_markdown():
+    data = request.get_json()
 
-    conn = sqlite3.connect(url)
+    sql = "SELECT articles.ID, articles.userId,articles.title, articles.article,articles.createDate, articles.type, " \
+          "user.Name " \
+          "FROM articles as articles INNER JOIN user as user where articles.userId = user.Id and articles.ID=?;"
+    val = [data["Id"]]
 
-    # 创建一个Cursor:
-    cursor = conn.cursor()
-
-    # 从数据库获取文章
-    cursor.execute("SELECT * FROM articles where ID=?;", [article_id])
-
-    # text = cursor.fetchone()
-    # # 把从数据库获取的list格式的文章连接成字符串格式
-    # text = "".join(text)
-
-    data = cursor.fetchall()
-    data = json.dumps(data)
-
-    # html = markdown(text)
-    # print(text)
-
-    # 关闭Cursor:
-    cursor.close()
-
-    # 提交事务:
-    conn.commit()
-
-    # 关闭Connection:
-    conn.close()
-    return data
+    return sql_function(sql, val)
 
 
+# 插入文章功能
 @app.route("/insert_article", methods=['POST', ])
 def insert_article():
     data = request.data
@@ -316,6 +303,7 @@ def insert_article():
         return ""
 
 
+# 更新文章功能
 @app.route("/update_article", methods=['POST', ])
 def update_article():
     data = request.get_json()
@@ -324,6 +312,7 @@ def update_article():
     return sql_function(sql, val)
 
 
+# 删除文章功能
 @app.route("/delete_article", methods=['POST', ])
 def delete_article():
     data = request.get_json()
@@ -332,6 +321,7 @@ def delete_article():
     return sql_function(sql, val)
 
 
+# 增加Canvas功能
 @app.route("/insert_canvas", methods=['POST', ])
 def insert_canvas():
     data = request.get_json()
@@ -341,6 +331,7 @@ def insert_canvas():
     return sql_function(sql, val)
 
 
+# 删除Canvas功能
 @app.route("/delete_canvas", methods=['POST', ])
 def delete_canvas():
     data = request.get_json()
@@ -349,6 +340,7 @@ def delete_canvas():
     return sql_function(sql, val)
 
 
+# 查找Canvas功能
 @app.route("/select_canvas", methods=['POST', ])
 def select_canvas():
     data = request.get_json()
@@ -362,6 +354,7 @@ def select_canvas():
     return sql_function(sql, val)
 
 
+# 更新Canvas功能
 @app.route("/update_canvas", methods=['POST', ])
 def update_canvas():
     data = request.get_json()
@@ -370,19 +363,9 @@ def update_canvas():
     return sql_function(sql, val)
 
 
+# 获取图片功能
 @app.route("/get_images", methods=['POST', ])
 def get_image():
-    # conn = sqlite3.connect(url)
-    # cursor = conn.cursor()
-    #
-    # cursor.execute("SELECT Id, Name, LittleImage FROM images ;")
-    # data = cursor.fetchall()
-    # data = json.dumps(data)
-    #
-    # cursor.close()
-    # conn.commit()
-    # conn.close()
-    # return data
     data = request.get_json()
     if "UserId" not in data:
         sql = "SELECT Id, Name, LittleImage FROM images ;"
@@ -393,6 +376,7 @@ def get_image():
     return sql_function(sql, val)
 
 
+# 获取原图功能
 @app.route("/get_one_image", methods=['POST', ])
 def get_one_image():
     data = request.data
@@ -412,6 +396,7 @@ def get_one_image():
     return data
 
 
+# 添加图片功能
 @app.route("/insert_image", methods=['POST', ])
 def insert_image():
     data = request.data
@@ -434,6 +419,7 @@ def insert_image():
         return ""
 
 
+# 删除图片功能
 @app.route("/delete_image", methods=['POST', ])
 def delete_image():
     data = request.get_json()
@@ -442,6 +428,7 @@ def delete_image():
     return sql_function(sql, val)
 
 
+# 插入评论功能
 @app.route("/insert_message", methods=['POST', ])
 def insert_message():
     data = request.data
@@ -464,6 +451,16 @@ def insert_message():
         return ""
 
 
+# 删除评论功能
+@app.route("/delete_message", methods=['POST', ])
+def delete_message():
+    data = request.get_json()
+    sql = "DELETE from message where Id = ?;"
+    val = [data["Id"]]
+    return sql_function(sql, val)
+
+
+# 获取评论功能
 @app.route("/get_message", methods=['POST', ])
 def get_message():
     data = request.get_json()
