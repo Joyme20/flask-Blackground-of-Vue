@@ -10,6 +10,23 @@ app = Flask(__name__)
 url = 'test.db'  # 本地路径
 
 
+def sql_function(sql, val):
+    conn = sqlite3.connect(url)
+    cursor = conn.cursor()
+
+    if val:
+        cursor.execute(sql, val)
+    else:
+        cursor.execute(sql)
+    data = cursor.fetchall()
+    data = json.dumps(data)
+
+    cursor.close()
+    conn.commit()
+    conn.close()
+    return data
+
+
 @app.route('/')
 def hello_world():
     return 'Hello World!'
@@ -17,9 +34,6 @@ def hello_world():
 
 @app.route('/login', methods=['POST', ])
 def login():
-    # account = request.form.get('account')
-    # password = request.form.get('password')
-    # print ("req",request.form)
     data = request.data
     data = str(data, encoding='utf8')
     print(type(data))
@@ -115,6 +129,14 @@ def register():
         return newId
     else:
         return ""
+
+
+@app.route("/check_username", methods=['POST', ])
+def check_username():
+    data = request.get_json()
+    sql = "SELECT Account FROM user WHERE Account=? ;"
+    val = [data['Account']]
+    return sql_function(sql, val)
 
 
 @app.route("/title", methods=['GET', ])
@@ -241,30 +263,22 @@ def get_user_title():
 
 @app.route("/articles/<article_id>", methods=['GET', ])
 def get_markdown(article_id):
-    # in_file = "C:\\Users\laomingming\PycharmProjects\\laomingmingBG\\posts\\" + str(name) + ".md"
-    # input_file = codecs.open(in_file, mode="r", encoding="utf-8")
-    # text = input_file.read()
-    # html = markdown.markdown(text)
-    # html = markdown(text)
-    # return html
     print(type(id))
 
-    # 连接到SQLite数据库
-    # 数据库文件是test.db
-    # 如果文件不存在，会自动在当前目录创建:
-    # conn = sqlite3.connect('/home/ubuntu/usr/python/flask-Blackground-of-Vue/test.db')
-    # conn = sqlite3.connect('test.db')
     conn = sqlite3.connect(url)
 
     # 创建一个Cursor:
     cursor = conn.cursor()
 
     # 从数据库获取文章
-    cursor.execute("SELECT article FROM articles where ID=?;", [article_id])
-    text = cursor.fetchone()
+    cursor.execute("SELECT * FROM articles where ID=?;", [article_id])
 
-    # 把从数据库获取的list格式的文章连接成字符串格式
-    text = "".join(text)
+    # text = cursor.fetchone()
+    # # 把从数据库获取的list格式的文章连接成字符串格式
+    # text = "".join(text)
+
+    data = cursor.fetchall()
+    data = json.dumps(data)
 
     # html = markdown(text)
     # print(text)
@@ -277,7 +291,7 @@ def get_markdown(article_id):
 
     # 关闭Connection:
     conn.close()
-    return text
+    return data
 
 
 @app.route("/insert_article", methods=['POST', ])
@@ -285,15 +299,12 @@ def insert_article():
     data = request.data
     data = str(data, encoding='utf8')
     data = json.loads(data)
-    # data = [title,article,createDate,type]
-    # name = data['name']
-    # account = data['account']
-    # password = data['password']
+
     newId = str(uuid.uuid1())
 
     conn = sqlite3.connect(url)
     cursor = conn.cursor()
-    sql = "insert into articles (id,userId,title,article,createDate,type) values (?,?,?,?,?,?);"
+    sql = "insert into articles (ID,userId,title,article,createDate,type) values (?,?,?,?,?,?);"
     cursor.execute(sql, [newId, data["userId"], data["title"], data["article"], data["createDate"], data["type"]])
     row = cursor.rowcount
     cursor.close()
@@ -305,26 +316,81 @@ def insert_article():
         return ""
 
 
-@app.route("delete_article",methods=['POST',])
+@app.route("/update_article", methods=['POST', ])
+def update_article():
+    data = request.get_json()
+    sql = "update articles set title = ?, article=?, createDate=?, type=? where ID=?;"
+    val = [data["title"], data["article"], data["createDate"], data["type"], data["ID"]]
+    return sql_function(sql, val)
+
+
+@app.route("/delete_article", methods=['POST', ])
 def delete_article():
-    data = request.data
-    data = str(data, encoding='utf8')
-    data = json.loads(data)
+    data = request.get_json()
+    sql = "DELETE from articles where Id = ?"
+    val = [data["Id"]]
+    return sql_function(sql, val)
 
 
-@app.route("/get_images", methods=['GET', ])
+@app.route("/insert_canvas", methods=['POST', ])
+def insert_canvas():
+    data = request.get_json()
+    newId = str(uuid.uuid1())
+    sql = "insert into canvas (Id,UserId,Code,Date,Name) values (?,?,?,?,?);"
+    val = [newId, data["UserId"], data["Code"], data["Date"], data["Name"]]
+    return sql_function(sql, val)
+
+
+@app.route("/delete_canvas", methods=['POST', ])
+def delete_canvas():
+    data = request.get_json()
+    sql = "DELETE from canvas where Id = ?"
+    val = [data["Id"]]
+    return sql_function(sql, val)
+
+
+@app.route("/select_canvas", methods=['POST', ])
+def select_canvas():
+    data = request.get_json()
+    if "UserId" not in data:
+        sql = "SELECT canvas.Id, canvas.UserId,canvas.Code, canvas.Date,canvas.Name, user.Name  " \
+              "FROM canvas as canvas INNER JOIN user as user where canvas.UserId = user.Id;"
+        val = []
+    else:
+        sql = "SELECT * FROM canvas where UserId=?;"
+        val = [data["UserId"]]
+    return sql_function(sql, val)
+
+
+@app.route("/update_canvas", methods=['POST', ])
+def update_canvas():
+    data = request.get_json()
+    sql = "update canvas set Code = ?, Date=?, Name=? where Id=?;"
+    val = [data["Code"], data["Date"], data["Name"], data["Id"]]
+    return sql_function(sql, val)
+
+
+@app.route("/get_images", methods=['POST', ])
 def get_image():
-    conn = sqlite3.connect(url)
-    cursor = conn.cursor()
-
-    cursor.execute("SELECT Id, Name, LittleImage FROM images ;")
-    data = cursor.fetchall()
-    data = json.dumps(data)
-
-    cursor.close()
-    conn.commit()
-    conn.close()
-    return data
+    # conn = sqlite3.connect(url)
+    # cursor = conn.cursor()
+    #
+    # cursor.execute("SELECT Id, Name, LittleImage FROM images ;")
+    # data = cursor.fetchall()
+    # data = json.dumps(data)
+    #
+    # cursor.close()
+    # conn.commit()
+    # conn.close()
+    # return data
+    data = request.get_json()
+    if "UserId" not in data:
+        sql = "SELECT Id, Name, LittleImage FROM images ;"
+        val = []
+    else:
+        sql = "SELECT Id, Name, LittleImage FROM images where UserId=?;"
+        val = [data["UserId"]]
+    return sql_function(sql, val)
 
 
 @app.route("/get_one_image", methods=['POST', ])
@@ -356,8 +422,8 @@ def insert_image():
 
     conn = sqlite3.connect(url)
     cursor = conn.cursor()
-    sql = "insert into images (Id,UserId, Name, LittleImage, Image) values (?,?,?,?,?);"
-    cursor.execute(sql, [newId, data["UserId"], data["Name"], data["LittleImage"], data["Image"]])
+    sql = "insert into images (Id,UserId, Name, LittleImage, Image, Date) values (?,?,?,?,?,?);"
+    cursor.execute(sql, [newId, data["UserId"], data["Name"], data["LittleImage"], data["Image"], data["Date"]])
     row = cursor.rowcount
     cursor.close()
     conn.commit()
@@ -366,7 +432,14 @@ def insert_image():
         return newId
     else:
         return ""
-    # return data
+
+
+@app.route("/delete_image", methods=['POST', ])
+def delete_image():
+    data = request.get_json()
+    sql = "DELETE from images where Id = ?"
+    val = [data["Id"]]
+    return sql_function(sql, val)
 
 
 @app.route("/insert_message", methods=['POST', ])
@@ -393,21 +466,10 @@ def insert_message():
 
 @app.route("/get_message", methods=['POST', ])
 def get_message():
-    data = request.data
-    data = str(data, encoding='utf8')
-    data = json.loads(data)
-    conn = sqlite3.connect(url)
-    cursor = conn.cursor()
-
-    # if(type())
-    cursor.execute("SELECT * FROM message where ArticleId =? ;", data["ArticleId"])
-    data = cursor.fetchall()
-    data = json.dumps(data)
-
-    cursor.close()
-    conn.commit()
-    conn.close()
-    return data
+    data = request.get_json()
+    sql = "SELECT * FROM message where ArticleId =? ;"
+    val = [data["ArticleId"]]
+    return sql_function(sql, val)
 
 
 if __name__ == '__main__':

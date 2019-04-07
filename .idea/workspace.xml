@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/laomingmingBlackground.py" line="214" />
+    <bookmark url="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/werkzeug/local.py" line="327" />
+    <bookmark url="file://$PROJECT_DIR$/laomingmingBlackground.py" line="236" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4797e79c-8859-42fd-a72b-1af6869ebca2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/article.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/65612810-94d7-48c6-a4d4-3688b450e4d4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/65612810-94d7-48c6-a4d4-3688b450e4d4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/laomingmingBlackground.py" beforeDir="false" afterPath="$PROJECT_DIR$/laomingmingBlackground.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laomingmingBlackground_nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/laomingmingBlackground_nginx.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laomingmingBlackground_uwsgi.ini" beforeDir="false" afterPath="$PROJECT_DIR$/laomingmingBlackground_uwsgi.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.db" beforeDir="false" afterPath="$PROJECT_DIR$/test.db" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,7 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/laomingmingBG$laomingmingBG.coverage" NAME="laomingmingBG Coverage Results" MODIFIED="1551878189790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/laomingmingBG$laomingmingBG.coverage" NAME="laomingmingBG Coverage Results" MODIFIED="1554383983005" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -55,6 +51,34 @@
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="test.db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="canvas: table" type="3d80ac25:SqliteImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="test.db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="images: table" type="3d80ac25:SqliteImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="test.db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="message: table" type="3d80ac25:SqliteImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="test.db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="user: table" type="3d80ac25:SqliteImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="test.db" type="feb32156:DbDataSourceImpl" />
         <item name="collations" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
@@ -70,16 +94,48 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/laomingmingBlackground.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1171">
-              <caret line="101" column="29" lean-forward="true" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
+            <state relative-caret-position="154">
+              <caret line="446" column="23" selection-start-line="446" selection-start-column="23" selection-end-line="446" selection-end-column="23" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
-                <marker date="1552309715764" expanded="true" signature="3138:3178" ph="SELECT title... articles" />
-                <marker date="1552309715764" expanded="true" signature="3957:4009" ph="SELECT id,ti... articles" />
-                <marker date="1552309715764" expanded="true" signature="3957:4015" ph="SELECT id,ti... articles" />
-                <marker date="1552309715764" expanded="true" signature="4561:4619" ph="SELECT id,ti... articles" />
-                <marker date="1552309715764" expanded="true" signature="6021:6060" ph="SELECT artic... articles" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/article.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1911">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="uml://DATABASE/65612810-94d7-48c6-a4d4-3688b450e4d4.SCHEMA:main">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>DATABASE</ID>
+              <OriginalElement>65612810-94d7-48c6-a4d4-3688b450e4d4.SCHEMA:main</OriginalElement>
+              <nodes>
+                <node x="0.0" y="237.0">65612810-94d7-48c6-a4d4-3688b450e4d4.TABLE:main.message</node>
+                <node x="0.0" y="448.0">65612810-94d7-48c6-a4d4-3688b450e4d4.TABLE:main.user</node>
+                <node x="272.0" y="0.0">65612810-94d7-48c6-a4d4-3688b450e4d4.TABLE:main.images</node>
+                <node x="0.0" y="0.0">65612810-94d7-48c6-a4d4-3688b450e4d4.TABLE:main.articles</node>
+                <node x="268.0" y="237.0">65612810-94d7-48c6-a4d4-3688b450e4d4.TABLE:main.canvas</node>
+              </nodes>
+              <notes />
+              <edges />
+              <settings layout="Hierarchic Group" zoom="1.0" x="-161.0" y="231.0" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Key columns</Category>
+                <Category>Columns</Category>
+              </Categories>
             </state>
           </provider>
         </entry>
@@ -94,28 +150,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://65612810-94d7-48c6-a4d4-3688b450e4d4/schema/main/table/message">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://65612810-94d7-48c6-a4d4-3688b450e4d4/schema/main/table/images">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://65612810-94d7-48c6-a4d4-3688b450e4d4/schema/main/table/articles">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+        <entry file="file://$PROJECT_DIR$/SQLite.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="57" column="9" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
+              <folding>
+                <marker date="1527663666672" expanded="true" signature="263:327" ph="create table... user" />
+                <marker date="1527663666672" expanded="true" signature="412:467" ph="insert into user... " />
+                <marker date="1527663666672" expanded="true" signature="793:808" ph="INSERT INTO articles... " />
+                <marker date="1527663666672" expanded="true" signature="809:829" ph="INSERT INTO articles... " />
+                <marker date="1527663666672" expanded="true" signature="809:883" ph="INSERT INTO articles... " />
+                <marker date="1527663666672" expanded="true" signature="809:891" ph="INSERT INTO COMPANY... " />
+                <marker date="1527663666672" expanded="true" signature="955:1004" ph="SELECT name sqlite_master" />
+                <marker date="1527663666672" expanded="true" signature="1144:1170" ph="SELECT title... articles" />
+                <marker date="1527663666672" expanded="true" signature="1219:1244" ph="SELECT data articles" />
+                <marker date="1527663666672" expanded="true" signature="1219:1255" ph="SELECT data articles" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -136,6 +195,8 @@
       <find>`</find>
       <find>request</find>
       <find>print</find>
+      <find>articles</find>
+      <find>update</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -154,14 +215,16 @@
         <option value="src:table:/b1824b84/65612810-94d7-48c6-a4d4-3688b450e4d4/main.user" />
         <option value="65612810-94d7-48c6-a4d4-3688b450e4d4/schema/main/table/user.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/article.py" />
         <option value="$PROJECT_DIR$/laomingmingBlackground.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="1545" />
-    <option name="height" value="1047" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -200,13 +263,14 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Sqlite (Xerial)" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/Edit As Language" value="GenericSQL" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="GenericSQL" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/SQL Dialects" value="SQLite" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/laomingmingBlackground.py" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -288,12 +352,19 @@
       <workItem from="1551687853335" duration="22920000" />
       <workItem from="1551878122102" duration="2466000" />
       <workItem from="1552309422541" duration="452000" />
-      <workItem from="1552314399336" duration="1205000" />
+      <workItem from="1552314399336" duration="1979000" />
+      <workItem from="1552483690809" duration="602000" />
+      <workItem from="1552818867306" duration="1195000" />
+      <workItem from="1552821187379" duration="3676000" />
+      <workItem from="1552910594929" duration="8040000" />
+      <workItem from="1553230592526" duration="603000" />
+      <workItem from="1553314203628" duration="11179000" />
+      <workItem from="1553499816916" duration="22417000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79988000" />
+    <option name="totallyTimeSpent" value="128474000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -305,23 +376,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09090909" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09197861" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2303433" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3914989" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2303433" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39091915" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32890365" />
       <window_info anchor="bottom" id="Database Console" order="7" weight="0.3277405" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32779622" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.24916944" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32890365" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
@@ -330,7 +401,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32929516" />
-      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.19465241" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.15454546" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,6 +420,21 @@
           <line>63</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/laomingmingBlackground.py</url>
+          <line>358</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/laomingmingBlackground.py</url>
+          <line>354</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/laomingmingBlackground.py</url>
+          <line>137</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -361,18 +447,24 @@
         <watch expression="data[0]" language="Python" />
         <watch expression="data" language="Python" />
         <watch expression="data[&quot;Id&quot;]" language="Python" />
+        <watch expression="data.Id" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
       <expression>
-        <expression-string>data[&quot;ArticleId&quot;]</expression-string>
+        <expression-string>data.Id</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
         <expression-string>data[&quot;Id&quot;]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>data[&quot;ArticleId&quot;]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -445,13 +537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laomingmingBlackground_uwsgi.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -489,25 +574,6 @@
     <entry file="das://src:table:/b1824b84/65612810-94d7-48c6-a4d4-3688b450e4d4/main.articles" />
     <entry file="das://src:table:/b1824b84/65612810-94d7-48c6-a4d4-3688b450e4d4/main.sqlite_master" />
     <entry file="das://index:/b1824b84/65612810-94d7-48c6-a4d4-3688b450e4d4/main.user.sqlite_autoindex_user_1" />
-    <entry file="file://$PROJECT_DIR$/SQLite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
-          <folding>
-            <marker date="1527663666672" expanded="true" signature="263:327" ph="create table... user" />
-            <marker date="1527663666672" expanded="true" signature="412:467" ph="insert into user... " />
-            <marker date="1527663666672" expanded="true" signature="793:808" ph="INSERT INTO articles... " />
-            <marker date="1527663666672" expanded="true" signature="809:829" ph="INSERT INTO articles... " />
-            <marker date="1527663666672" expanded="true" signature="809:883" ph="INSERT INTO articles... " />
-            <marker date="1527663666672" expanded="true" signature="809:891" ph="INSERT INTO COMPANY... " />
-            <marker date="1527663666672" expanded="true" signature="955:1004" ph="SELECT name sqlite_master" />
-            <marker date="1527663666672" expanded="true" signature="1144:1170" ph="SELECT title... articles" />
-            <marker date="1527663666672" expanded="true" signature="1219:1244" ph="SELECT data articles" />
-            <marker date="1527663666672" expanded="true" signature="1219:1255" ph="SELECT data articles" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/65612810-94d7-48c6-a4d4-3688b450e4d4/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -567,20 +633,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/werkzeug/local.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="165" selection-start-line="165" selection-end-line="165" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/flask/json/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="176" selection-start-line="176" selection-end-line="176" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://src:table:/b1824b84/65612810-94d7-48c6-a4d4-3688b450e4d4/main.user">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -588,22 +640,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laomingmingBlackground.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/werkzeug/local.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1171">
-          <caret line="101" column="29" lean-forward="true" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-            <marker date="1552309715764" expanded="true" signature="3138:3178" ph="SELECT title... articles" />
-            <marker date="1552309715764" expanded="true" signature="3957:4009" ph="SELECT id,ti... articles" />
-            <marker date="1552309715764" expanded="true" signature="3957:4015" ph="SELECT id,ti... articles" />
-            <marker date="1552309715764" expanded="true" signature="4561:4619" ph="SELECT id,ti... articles" />
-            <marker date="1552309715764" expanded="true" signature="6021:6060" ph="SELECT artic... articles" />
-          </folding>
+        <state relative-caret-position="395">
+          <caret line="315" column="28" lean-forward="true" selection-start-line="315" selection-start-column="28" selection-end-line="315" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/b1824b84/65612810-94d7-48c6-a4d4-3688b450e4d4/main.user">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/flask/json/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/b1824b84/65612810-94d7-48c6-a4d4-3688b450e4d4/main.articles">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://65612810-94d7-48c6-a4d4-3688b450e4d4/schema/main/table/canvas">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/65612810-94d7-48c6-a4d4-3688b450e4d4.TABLE:main.message">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>65612810-94d7-48c6-a4d4-3688b450e4d4.TABLE:main.message</OriginalElement>
+          <nodes>
+            <node x="" y="">65612810-94d7-48c6-a4d4-3688b450e4d4.TABLE:main.message</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="111.5" y="83.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/65612810-94d7-48c6-a4d4-3688b450e4d4.TABLE:main.canvas">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>65612810-94d7-48c6-a4d4-3688b450e4d4.TABLE:main.canvas</OriginalElement>
+          <nodes>
+            <node x="" y="">65612810-94d7-48c6-a4d4-3688b450e4d4.TABLE:main.canvas</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-381.5" y="7.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://65612810-94d7-48c6-a4d4-3688b450e4d4/schema/main/table/images">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -617,17 +720,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://65612810-94d7-48c6-a4d4-3688b450e4d4/schema/main/table/images">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/werkzeug/routing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="602" selection-start-line="602" selection-end-line="602" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="57" column="9" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
+          <folding>
+            <marker date="1527663666672" expanded="true" signature="263:327" ph="create table... user" />
+            <marker date="1527663666672" expanded="true" signature="412:467" ph="insert into user... " />
+            <marker date="1527663666672" expanded="true" signature="793:808" ph="INSERT INTO articles... " />
+            <marker date="1527663666672" expanded="true" signature="809:829" ph="INSERT INTO articles... " />
+            <marker date="1527663666672" expanded="true" signature="809:883" ph="INSERT INTO articles... " />
+            <marker date="1527663666672" expanded="true" signature="809:891" ph="INSERT INTO COMPANY... " />
+            <marker date="1527663666672" expanded="true" signature="955:1004" ph="SELECT name sqlite_master" />
+            <marker date="1527663666672" expanded="true" signature="1144:1170" ph="SELECT title... articles" />
+            <marker date="1527663666672" expanded="true" signature="1219:1244" ph="SELECT data articles" />
+            <marker date="1527663666672" expanded="true" signature="1219:1255" ph="SELECT data articles" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/65612810-94d7-48c6-a4d4-3688b450e4d4.SCHEMA:main">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>65612810-94d7-48c6-a4d4-3688b450e4d4.SCHEMA:main</OriginalElement>
+          <nodes>
+            <node x="0.0" y="237.0">65612810-94d7-48c6-a4d4-3688b450e4d4.TABLE:main.message</node>
+            <node x="0.0" y="448.0">65612810-94d7-48c6-a4d4-3688b450e4d4.TABLE:main.user</node>
+            <node x="272.0" y="0.0">65612810-94d7-48c6-a4d4-3688b450e4d4.TABLE:main.images</node>
+            <node x="0.0" y="0.0">65612810-94d7-48c6-a4d4-3688b450e4d4.TABLE:main.articles</node>
+            <node x="268.0" y="237.0">65612810-94d7-48c6-a4d4-3688b450e4d4.TABLE:main.canvas</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-161.0" y="231.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1911">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/b1824b84/65612810-94d7-48c6-a4d4-3688b450e4d4/main.user">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/b1824b84/65612810-94d7-48c6-a4d4-3688b450e4d4/main.articles">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/laomingmingBlackground.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="446" column="23" selection-start-line="446" selection-start-column="23" selection-end-line="446" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
