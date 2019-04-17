@@ -472,5 +472,5 @@ def get_message():
 if __name__ == '__main__':
     CORS(app, supports_credentials=True)  # 解决跨域请求
     # app.debug = True
-    # app.run(host='0.0.0.0', port=5000)
+    # app.run(host='0.0.0.0', port=8000)
     app.run()
